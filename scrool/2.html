@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sticky Scroll Section</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .sticky-section {
+      position: relative;
+      height: 200vh;
+      background: #f8f9fa;
+    }
+
+    .sticky-section-inner {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-content {
+      overflow-y: auto;
+      padding: 20px;
+      height: 100%;
+      border-right: 2px solid #dee2e6;
+      background-color: white;
+    }
+
+    .right-content {
+      padding: 20px;
+      background-color: #e9ecef;
+      height: 100%;
+    }
+
+    .left-content::-webkit-scrollbar {
+      display: none;
+    }
+    .left-content {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- Top Static Section -->
+  <section style="background: #f1f1f1;">
+    <div class="container">
+      <h2>Top Static Section</h2>
+      <p>ही सुरूवातीची section आहे. यामध्ये काहीही sticky/fixed effect नाही.</p>
+    </div>
+  </section>
+
+  <!-- Sticky Scroll Section -->
+  <section class="sticky-section">
+    <div class="container-fluid sticky-section-inner">
+      <div class="row w-100">
+        <div class="col-lg-8">
+          <div class="left-content" id="scrollArea">
+            <h2>Left Side Content</h2>
+            <!-- Dummy scrollable content -->
+            <p>Lorem ipsum dolor sit amet...</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Dolore, repellat, cumque hic ipsum officia saepe aut iusto eos nesciunt tempore!</p>
+            <p>Totam suscipit, deserunt accusamus, ipsa perspiciatis quam tempora corporis vel, dignissimos.</p>
+            <p>Magnam in labore fuga alias asperiores laborum rem libero quia earum.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="right-content">
+            <h4>Right Side</h4>
+            <p>ही right side आहे. इथे थोडकं content आहे.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Static Section -->
+  <section style="background: #f1f1f1;">
+    <div class="container">
+      <h2>Bottom Static Section</h2>
+      <p>ही शेवटची section आहे. यामध्येही काहीही sticky/fixed effect नाही.</p>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scroll Behavior -->
+  <script>
+    const scrollArea = document.getElementById('scrollArea');
+
+    window.addEventListener('wheel', function (e) {
+      const stickySection = document.querySelector('.sticky-section-inner');
+      const bounds = stickySection.getBoundingClientRect();
+
+      if (bounds.top === 0 && bounds.bottom > window.innerHeight) {
+        e.preventDefault(); // Stop default scroll
+
+        const isScrollAtBottom = scrollArea.scrollHeight - scrollArea.scrollTop <= scrollArea.clientHeight + 1;
+        const isScrollAtTop = scrollArea.scrollTop <= 0;
+
+        if (e.deltaY > 0) {
+          // 👇 User scrolls down
+          if (!isScrollAtBottom) {
+            scrollArea.scrollTop += e.deltaY;
+          } else {
+            // Reached bottom – lock scroll and fix height
+            scrollArea.style.height = '100vh';
+            scrollArea.style.overflow = 'hidden';
+          }
+        } else {
+          // 👆 User scrolls up
+          if (scrollArea.style.overflow === 'hidden') {
+            // Unlock scroll and reset height
+            scrollArea.style.height = '100vh';
+            scrollArea.style.overflowY = 'auto';
+          } else {
+            scrollArea.scrollTop += e.deltaY;
+          }
+        }
+      }
+    }, { passive: false });
+  </script>
+</body>
+</html>

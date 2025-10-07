@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stepwise Scroll Animation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 300vh; /* Allow more scroll */
+      font-family: Arial, sans-serif;
+    }
+
+    .section-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .banner {
+      width: 100%;
+      height: 100vh;
+      transition: none;
+      background-image: url('https://via.placeholder.com/1600x900');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content {
+      width: 30%;
+      height: 100vh;
+      background-color: #f3f3f3;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      transition: none;
+    }
+
+    .content p {
+      transform: translateY(100%);
+      opacity: 0;
+      transition: none;
+      font-size: 1.2rem;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .scroll-container {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll-container">
+  <div class="section-wrapper" id="section">
+    <div class="banner" id="banner">
+            <img src="../assets/images/slider/banner-slider-03.jpg" alt="Banner Image">
+    </div>
+    <div class="content" id="content">
+      <p id="contentText">हे कंटेंट खालीून मधोमध स्क्रोलने यावे</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const banner = document.getElementById("banner");
+  const content = document.getElementById("content");
+  const contentText = document.getElementById("contentText");
+  const section = document.getElementById("section");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const triggerPoint = section.offsetTop;
+    const scrollProgress = scrollY - triggerPoint;
+
+    if (scrollProgress >= 0 && scrollProgress <= 500) {
+      // Phase 1: Shrink banner width from 100% to 70%
+      const progress = Math.min(scrollProgress / 500, 1);
+      const bannerWidth = 100 - progress * 30; // 100 → 70
+      banner.style.width = `${bannerWidth}%`;
+    }
+
+    if (scrollProgress > 500 && scrollProgress <= 800) {
+      // Phase 2: Slide content from bottom to center
+      const contentProgress = (scrollProgress - 500) / 300;
+      const contentTop = 100 - contentProgress * 50; // 100% → 50%
+      const textTranslate = 100 - contentProgress * 100; // 100% → 0%
+      const opacity = contentProgress;
+
+      content.style.top = `${contentTop}%`;
+      contentText.style.transform = `translateY(${textTranslate}%)`;
+      contentText.style.opacity = opacity;
+    }
+
+    if (scrollProgress > 800) {
+      // Phase 3: Move entire section up (simulate scroll to next)
+      section.style.transform = `translateY(-${scrollProgress - 800}px)`;
+    } else {
+      section.style.transform = `translateY(0)`;
+    }
+  });
+</script>
+
+</body>
+</html>

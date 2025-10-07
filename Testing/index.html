@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Based Banner Movement</title>
+  <style>
+   body {
+      margin: 0;
+      height: 200vh; /* scroll साठी page लांब केलं */
+      background: #f0f0f0;
+    }
+
+    .banner {
+      position: fixed;
+      top: 0px;
+      /* left: 0; */
+      right: 0;
+      width: 100%;
+      height: auto;
+      /* transition: left 0.1s ease-out; */
+      transition: right 0.1s ease-out;
+    }
+
+    .container {
+      position: relative;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="../assets/images/banner/1.jpeg" class="banner" id="banner" />
+  </div>
+
+  <script>
+    const banner = document.getElementById("banner");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      // Banner ला left पासून 0px ते 50vw पर्यंत move करायचं आहे
+      // Let’s assume scrollY 0 ते 1000 पर्यंत सरकेल, ते proportion वापरून 50vw पर्यंत movement
+      const maxScroll = 1000; // adjustable
+      const maxMove = window.innerWidth * 0.5; // 50% viewport width
+
+      let move = (scrollY / maxScroll) * maxMove;
+
+      // Limit max movement
+      if (move > maxMove) move = maxMove;
+
+    //   banner.style.left = `${move}px`;
+      banner.style.right = `${move}px`;
+    });
+  </script>
+
+</body>
+</html>

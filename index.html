@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- MeanMenu Min CSS -->
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css" />
+    <!-- Boxicon Min CSS -->
+    <link rel="stylesheet" href="assets/css/boxicons.min.css" />
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <!-- Magnific Min CSS -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/mycss.css" />
+    <!-- Dark CSS -->
+    <link rel="stylesheet" href="assets/css/dark.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <!-- Tittle -->
+    <title>Home - Markss Infotech Limited</title>
+
+    <style>
+        .single-service {
+            /* width: auto !important; */
+            position: relative;
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.5s;
+            border-radius: 4px;
+            z-index: 1;
+            overflow: hidden;
+            box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+            min-height: 350px;
+        }
+
+        .service-img img {
+            /* border: 1px solid red; */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .owl-nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .home-team-slider {
+            position: relative;
+        }
+
+        .owl-stage-outer {
+            z-index: -1;
+        }
+
+        /* start */
+        .owl-carousel .owl-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            /* prevent blocking slides click */
+        }
+
+        .owl-carousel .owl-nav button.owl-prev,
+        .owl-carousel .owl-nav button.owl-next {
+            pointer-events: all;
+            /* enable click */
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev img,
+        .owl-carousel .owl-nav button.owl-next img {
+            width: 40px;
+            /* adjust arrow size */
+            height: auto;
+        }
+
+        /* end */
+
+        /* start */
+        .client-logo-section {
+            overflow: hidden;
+            padding: 0px;
+            /* padding: 40px 0; */
+            /* background-color: #f8f9fa; */
+        }
+
+        .client-logo-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .logo-track {
+            display: flex;
+            width: calc(250px * 16);
+            /* 8 original + 8 duplicate logos */
+            animation: scroll 30s linear infinite;
+        }
+
+        /* .logo {
+            flex: 0 0 auto;
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        } */
+
+        /* .logo img {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+
+        .logo img:hover {
+            filter: grayscale(0%);
+        } */
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                width: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 140px;
+                margin-left: 0px;
+                /* margin-left: -13px; */
+            }
+        }
+
+        /* end */
+
+        .home-contact-area .form-group {
+            margin-bottom: 10px;
+        }
+
+        .home-contact-area .content textarea.form-control {
+            width: 100%;
+            border: 1px solid #eeeeee;
+            max-height: 120px;
+            min-height: 120px;
+            box-shadow: none;
+            padding-left: 25px;
+            padding-top: 15px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* start */
+        .card {
+            border: 1px solid gray;
+        }
+
+        .card-custom {
+            border: none;
+            border-radius: 0;
+            height: 100%;
+        }
+
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* .card-body {
+            background-color: white;
+            color: #1976d2;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        } */
+        .card-body i {
+            font-size: 1rem;
+        }
+
+        /* end */
+
+
+        .card-container {
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+            /* height: 350px; */
+            border: none;
+            border-radius: 0px;
+            border: 1px solid lightgray;
+            margin: 20px 0px;
+        }
+
+        .card-container img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card-hover-content {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            transition: bottom 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-container:hover .card-hover-content {
+            bottom: 0;
+        }
+
+        .card-hover-content .card-body {
+            padding: 1.25rem;
+        }
+
+        .card-hover-content .card-title {
+            color: #1976d2;
+            font-weight: 600;
+        }
+
+        .card-hover-content .card-text {
+            font-size: 0.9rem;
+            color: #333;
+            margin-top: 0.5rem;
+        }
+
+        .card-hover-content .card-footer {
+            /* background: linear-gradient(to right, #00c6ff, #0072ff); */
+            background:#012756;
+            color: white;
+            font-weight: 500;
+            text-align: right;
+            padding: 0.75rem 1.25rem;
+        }
+
+        .card-hover-content .card-footer i {
+            margin-left: 5px;
+        }
+
+        .top-label {
+            /* position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+      color: #1976d2;
+      font-weight: 600; */
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            /* padding: 1rem; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+            color: #1976d2;
+            font-weight: 600;
+            padding: 20px 20px 20px 20px;
+        }
+
+        .card-container:hover .top-label {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- PreLoader Start -->
+    <div class="loader-content">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PreLoader End -->
+
+    <!-- Header Area -->
+    <header class="header-area header-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-sm-0">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/logo2.png" alt="logo" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-sm-8 text-right pr-0">
+                    <div class="header-content-right">
+                        <ul class="header-contact">
+                            <li><a href="tel:+022-28690268"><i class="bx bxs-phone-call"></i> +022-28690268</a></li>
+                            <li><a href="mailto:info@markss.com"><i class="bx bxs-envelope"></i> info@markss.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4 text-right pl-0">
+                    <div class="header-content-right">
+                        <ul class="header-social">
+                            <li>
+                                <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"> <i class="bx bxs-envelope"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"> <i class="bx bxl-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Area -->
+
+    <!--Navbar Area -->
+    <div class="navbar-area">
+        <div class="mobile-nav">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="logo" />
+            </a>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav text-left">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle">About Us</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="about.html" class="nav-link">Company Overview</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="visionmission.html" class="nav-link">Vision, Mission & Values</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="partners-and-alliances.html" class="nav-link">Partners & Alliances</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link dropdown-toggle">Industries</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="solutions-retail.html" class="nav-link">Retail</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="solutions-manufacturing.html" class="nav-link">Manufacturing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="Industries-healthcare.html" class="nav-link">Healthcare</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="solutions-transportation-logistics.html" class="nav-link">Transportation & Logistics</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="solutions-warehouse-distribution.html" class="nav-link">Warehouse &
+                                            Supply Chain</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="solutions-government.html" class="nav-link">Government</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link dropdown-toggle">Products & Services</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="404.html" class="nav-link">Hardware</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="404.html" class="nav-link">Applications</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="services.html" class="nav-link">Services</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link dropdown-toggle">Case Studies & Success Stories</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="case.html" class="nav-link">Industry-Specific Case Studies</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="testimonials.html" class="nav-link">Testimonials from Clients</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link dropdown-toggle">Resources & Insights</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="blog.html" class="nav-link">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="404.html" class="nav-link">Whitepapers & Reports</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="404.html" class="nav-link">Webinars & Events</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link dropdown-toggle">Let’s Connect</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="contact.html" class="nav-link">Get In Touch</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="careers.html" class="nav-link">Careers</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-btn">
+                        <a href="solutions.html" class="box-btn">Get Started</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
+
+    <!-- Slider Area -->
+    <section class="slider-area-2">
+        <div class="home-slider owl-carousel owl-theme">
+            <div class="single-slider single-slider-bg-1">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12 text-center">
+                                    <div class="slider-content one">
+                                        <h1>Streamlining the Inventory By AIDC</h1>
+                                        <p>Our customers benefit from the most advanced AIDC technology, which offers
+                                            real-time visibility through product tracking to boost productivity, thus
+                                            growing their business.</p>
+
+                                        <!-- <div class="slider-btn text-center">
+                                            <a href="#" class="box-btn">Let’s Talk!</a>
+                                            <a href="#" class="box-btn border-btn">Know More</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-slider single-slider-bg-2">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12 text-center">
+                                    <div class="slider-content one">
+                                        <h1>Shaping Products As Per The Clients’ Needs</h1>
+                                        <p>At Markss Infotech, we understand that each client is unique and that needs
+                                            vary. Therefore, our team takes into account the client’s needs and shape
+                                            our solutions to fulfil them</p>
+
+                                        <!-- <div class="slider-btn text-center">
+                                            <a href="#" class="box-btn">Let’s Talk!</a>
+                                            <a href="#" class="box-btn border-btn">Know More!</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-slider single-slider-bg-3">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12 text-center">
+                                    <div class="slider-content one">
+                                        <h1>Adapting to the market trends</h1>
+                                        <p>The world has undergone a sea change in terms of operating business or the
+                                            technology that runs it. At Markss Infotech,
+                                            we understand and keep abreast of newer trends in the market,</p>
+
+                                        <!-- <div class="slider-btn text-center">
+                                            <a href="#" class="box-btn">Let’s Talk!</a>
+                                            <a href="#" class="box-btn border-btn">Know More</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-slider single-slider-bg-3">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12 text-center">
+                                    <div class="slider-content one">
+                                        <h1>Adapting to the market trends</h1>
+                                        <p>The world has undergone a sea change in terms of operating business or the
+                                            technology that runs it. At Markss Infotech,
+                                            we understand and keep abreast of newer trends in the market,</p>
+
+                                        <div class="slider-btn text-center">
+                                            <a href="#" class="box-btn">Let’s Talk!</a>
+                                            <a href="#" class="box-btn border-btn">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Slider Area -->
+
+
+    <!-- Start Technology Area -->
+    <section class="technology-area ptb-100 bg-color">
+        <div class="container">
+            <div class="row align-items-center choose-c">
+
+                <div class="col-lg-12">
+                    <div class="technology-content text-center">
+                        <h2>Your end to end automation partner</h2>
+
+                        <!-- <h5>An Automatic Identification Solutions for businesses and industries</h5> -->
+                        <p>Markss Infotech Limited offers innovative, cost-effective automatic identification solutions
+                            for business and industry. Customized Solutions from MARKSS represent the most innovative
+                            bar-coding products on the market today. We offer complete solutions-hardware, software &
+                            service-to help our customers to meet the challenges of dynamic & competitive business
+                            environment.</p>
+
+                        <a href="contact.html" class="box-btn">
+                            About Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Technology Area -->
+
+
+    <!-- Team Area -->
+    <section class="home-client-area pt-100 pb-100">
+        <div class="container-fluid">
+            <div class="section-title">
+                <span>Partners & Certifications</span>
+                <h2>Partners & Certifications</h2>
+                <p>Our team excels in innovation, collaboration, and dedication, achieving exceptional results through
+                    relentless pursuit of excellence.</p>
+            </div>
+
+
+
+            <section class="client-logo-section">
+                <div class="client-logo-slider">
+                    <div class="logo-track">
+                        <div class="logo"><img src="assets/images/client-logo/advantech.png" alt="advantech"></div>
+                        <div class="logo"><img src="assets/images/client-logo/asp.png" alt="asp"></div>
+                        <div class="logo"><img src="assets/images/client-logo/bartec.png" alt="bartec"></div>
+                        <div class="logo"><img src="assets/images/client-logo/extreme.png" alt="extreme"></div>
+                        <div class="logo"><img src="assets/images/client-logo/loftware.png" alt="loftware"></div>
+                        <div class="logo"><img src="assets/images/client-logo/omniid.png" alt="omniid"></div>
+                        <div class="logo"><img src="assets/images/client-logo/soti.png" alt="soti"></div>
+                        <div class="logo"><img src="assets/images/client-logo/zebra.png" alt="zebra"></div>
+
+                        <!-- duplicate logos for infinite effect -->
+                        <div class="logo"><img src="assets/images/client-logo/advantech.png" alt="advantech"></div>
+                        <div class="logo"><img src="assets/images/client-logo/asp.png" alt="asp"></div>
+                        <div class="logo"><img src="assets/images/client-logo/bartec.png" alt="bartec"></div>
+                        <div class="logo"><img src="assets/images/client-logo/extreme.png" alt="extreme"></div>
+                        <div class="logo"><img src="assets/images/client-logo/loftware.png" alt="loftware"></div>
+                        <div class="logo"><img src="assets/images/client-logo/omniid.png" alt="omniid"></div>
+                        <div class="logo"><img src="assets/images/client-logo/soti.png" alt="soti"></div>
+                        <div class="logo"><img src="assets/images/client-logo/zebra.png" alt="zebra"></div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </section>
+    <!-- End Team Area -->
+
+
+    <!-- Service Area -->
+    <section class="home-service-area">
+        <div class="container">
+            <div class="section-title">
+                <span>Smart Services</span>
+                <h2>Paso Provide All Kind of Tech Solutions</h2>
+                <p style="margin-bottom: -30px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendisse.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card card-container">
+                        <img src="./assets/images/service/1.jpg" alt="Retail">
+                        <div class="top-label">
+                            <span>Retail</span>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="card-hover-content">
+                            <div class="card-body">
+                                <h5 class="card-titlee">Retail</h5>
+                                <p class="card-textt">Let’s do retail that's right for the now of retail. Let’s scale
+                                    and energize your strategy with a digital backbone.</p>
+                            </div>
+                            <div class="card-footer">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-lg-4">
+                    <div class="card card-container">
+                        <img src="./assets/images/service/2.jpg" alt="Warehouse">
+                        <div class="top-label">
+                            <span>Manufacturing</span>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="card-hover-content">
+                            <div class="card-body">
+                                <h5 class="card-titlee">Manufacturing</h5>
+                                <p class="card-textt">Optimize your warehouse operations with smart logistics,
+                                    automation, and real-time inventory insights.</p>
+                            </div>
+                            <div class="card-footer">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-lg-4">
+                    <div class="card card-container">
+                        <img src="./assets/images/service/3.jpg" alt="Healthcare">
+                        <div class="top-label">
+                            <span>Healthcare</span>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="card-hover-content">
+                            <div class="card-body">
+                                <h5 class="card-titlee">Healthcare</h5>
+                                <p class="card-textt">Empower your care teams with data-driven insights, streamlined
+                                    workflows, and enhanced patient experiences.</p>
+                            </div>
+                            <div class="card-footer">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card card-container">
+                        <img src="./assets/images/service/1.jpg" alt="Retail">
+                        <div class="top-label">
+                            <span>Transportation & Logistics</span>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="card-hover-content">
+                            <div class="card-body">
+                                <h5 class="card-titlee">Transportation & Logistics</h5>
+                                <p class="card-textt">Let’s do retail that's right for the now of retail. Let’s scale
+                                    and energize your strategy with a digital backbone.</p>
+                            </div>
+                            <div class="card-footer">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-lg-4">
+                    <div class="card card-container">
+                        <img src="./assets/images/service/2.jpg" alt="Warehouse">
+                        <div class="top-label">
+                            <span>Warehouse & Supply Chain</span>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="card-hover-content">
+                            <div class="card-body">
+                                <h5 class="card-titlee">Warehouse & Supply Chain</h5>
+                                <p class="card-textt">Optimize your warehouse operations with smart logistics,
+                                    automation, and real-time inventory insights.</p>
+                            </div>
+                            <div class="card-footer">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-lg-4">
+                    <div class="card card-container">
+                        <img src="./assets/images/service/3.jpg" alt="Healthcare">
+                        <div class="top-label">
+                            <span>Government</span>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="card-hover-content">
+                            <div class="card-body">
+                                <h5 class="card-titlee">Government</h5>
+                                <p class="card-textt">Empower your care teams with data-driven insights, streamlined
+                                    workflows, and enhanced patient experiences.</p>
+                            </div>
+                            <div class="card-footer">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img src="assets/images/service/1." alt="" srcset=""> -->
+
+
+    </section>
+    <!-- End Service Area -->
+
+
+
+    <!-- Choose Area -->
+    <section class="home2-choose-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span>TechnoSphere</span>
+                <h2>Business Technology</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3 col-sm-4">
+                    <div class="single-choose">
+                        <div class="icon">
+                            <img src="./assets/images/why-us/InnovativeSolutions.png" style="height: 100px;"
+                                alt="500Products">
+                        </div>
+                        <h3>Barcode</h3>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-4">
+                    <div class="single-choose">
+                        <div class="icon">
+                            <img src="./assets/images/why-us/CustomerCentricity.png" style="height: 100px;"
+                                alt="500Products">
+                        </div>
+                        <h3>IOT</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-4">
+                    <div class="single-choose">
+                        <div class="icon">
+                            <img src="./assets/images/why-us/CustomerCentricity.png" style="height: 100px;"
+                                alt="500Products">
+                        </div>
+                        <h3>RFID</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-4">
+                    <div class="single-choose">
+                        <div class="icon">
+                            <img src="./assets/images/why-us/CustomerCentricity.png" style="height: 100px;"
+                                alt="500Products">
+                        </div>
+                        <h3>Mobile Computing</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-4">
+                    <div class="single-choose">
+                        <div class="icon">
+                            <img src="./assets/images/why-us/CustomerCentricity.png" style="height: 100px;"
+                                alt="500Products">
+                        </div>
+                        <h3>location & Motion Sensing</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-4">
+                    <div class="single-choose">
+                        <div class="icon">
+                            <img src="./assets/images/why-us/CustomerCentricity.png" style="height: 100px;"
+                                alt="500Products">
+                        </div>
+                        <h3>Smart Card</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-4">
+                    <div class="single-choose">
+                        <div class="icon">
+                            <img src="./assets/images/why-us/CustomerCentricity.png" style="height: 100px;"
+                                alt="500Products">
+                        </div>
+                        <h3>Cloud Based Device</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-4">
+                    <div class="single-choose">
+                        <div class="icon">
+                            <img src="./assets/images/why-us/CustomerCentricity.png" style="height: 100px;"
+                                alt="500Products">
+                        </div>
+                        <h3>Robotics and Automation</h3>
+                    </div>
+                </div>
+          </div>
+        </div>
+    </section>
+    <!-- End Choose Area -->
+
+
+
+
+    <!-- Start Client Area -->
+    <section class="client-area ptb-100 bg-color">
+        <div class="container">
+            <div class="section-title">
+                <span>Testimonials</span>
+                <h2>What Our Client’s Say</h2>
+                <p style="margin-bottom: -15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque
+                    blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
+            </div>
+
+            <div class="client-wrap owl-carousel owl-theme">
+                <div class="single-client">
+                    <img src="assets/images/client-logo/advantech.png" alt="img">
+
+                    <p>We would like to express our appreciation for the amazing work done on warehouse management
+                        systems. The dedication shown by your team to achieve the MARKSS Warehouse Solution under SAP
+                        system was simply amazing! Moreover, the team ensured faster traceability and product location,
+                        error-free dispatch and loading, efficient, paperless stock taking ensuring speedy, efficient
+                        delivery. The team’s extraordinary professionalism has impressed us immensely. We wish you all
+                        the very best for your future endeavour.</p>
+
+                    <h3 >SBL Pvt. Ltd</h3>
+                    <span>CEO of Company</span>
+                </div>
+
+                <div class="single-client">
+                    <img src="assets/images/client-logo/asp.png" alt="img">
+
+                    <p>Thanks, Markss Team for your timely support, we appreciate it. We needed product traceability
+                        across our value chain. Hence, we approached Markss for the solution and with implemented
+                        Customized Barcode Solutions developed in SAP BSP with the help of mobile handheld devices,
+                        machine vision camera on conveyer lines, industrial barcode printers etc. It ensured quicker
+                        product traceability and product location, dispatch and loading, paperless stock-taking ensuring
+                        speedy, efficient delivery.</p>
+
+                    <h3>Havells India Ltd</h3>
+                    <span>CEO of Company</span>
+                </div>
+
+                <div class="single-client">
+                    <img src="assets/images/client-logo/extreme.png" alt="img">
+                    <p>At Mahindra, we give utmost importance to digitizing entire the production line. We were seeking
+                        upgrade our system and hence, hired Markss Infotech. We intended to streamline the line
+                        sequencing and traceability of our own metric to benchmark the processes, maintaining the same
+                        quality. We chose Zebra barcode scanner/handheld mobile terminal and industrial grade printers
+                        for all our assembly line set-up. It helped us at macro and micro level to maintain each
+                        assembly station with barcoded scanning</p>
+
+                    <h3>Mahindra</h3>
+                    <span>Company Founder</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Client Area -->
+
+    <!-- Team Area -->
+    <section class="home-team-area pt-100 pb-100">
+        <div class="container">
+            <div class="section-title">
+                <span>Team Members</span>
+                <h2>Meet the team</h2>
+                <p>Our team excels in innovation, collaboration, and dedication, achieving exceptional results through
+                    relentless pursuit of excellence.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-3">
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t1.jpg" style="width: 100%;" alt="team" />
+                            <ul class="social">
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="bx bxs-envelope"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content text-center">
+                            <h3>Devang Merchant</h3>
+                            <p>Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t2.jpg" style="width: 100%;" alt="team" />
+                            <ul class="social">
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="bx bxs-envelope"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content text-center">
+                            <h3>Kirit Shah</h3>
+                            <p>Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="single-team">
+                        <div class="team-img">
+                            <img src="assets/images/team/t3.jpg" style="width: 100%;" alt="team" />
+                            <ul class="social">
+                                <li>
+                                    <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="bx bxl-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="bx bxs-envelope"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content text-center">
+                            <h3>Kalpesh Shah</h3>
+                            <p>Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Team Area -->
+
+    <!-- Team Area -->
+    <section class="home-team-area pt-100 pb-100 bg-color">
+        <div class="container">
+            <div class="section-title">
+                <span>blog</span>
+                <h2>Blog</h2>
+                <p>Our team excels in innovation, collaboration, and dedication, achieving exceptional results through
+                    relentless pursuit of excellence.</p>
+            </div>
+
+            <div class="home-blog-slider owl-carousel owl-theme">
+                <div class="single-team">
+                    <div class="team-img">
+                        <img src="assets/images/blog/blog-size.png" style="height: 300px;" alt="team" />
+                    </div>
+                    <div class="content">
+                        <h3>Easy & Most Powerful Server Platform.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+
+                <div class="single-team">
+                    <div class="content">
+                        <h3>Easy & Most Powerful Server Platform.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                    <div class="team-img">
+                        <img src="assets/images/blog/blog-size.png" style="height: 300px;" alt="team" />
+                    </div>
+                </div>
+
+                <div class="single-team">
+                    <div class="team-img">
+                        <img src="assets/images/blog/blog-size.png" style="height: 300px;" alt="team" />
+                    </div>
+                    <div class="content">
+                        <h3>Easy & Most Powerful Server Platform.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+
+                <div class="single-team">
+                    <div class="content">
+                        <h3>Easy & Most Powerful Server Platform.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                    <div class="team-img">
+                        <img src="assets/images/blog/blog-size.png" style="height: 300px;" alt="team" />
+                    </div>
+                </div>
+
+                <div class="single-team">
+                    <div class="team-img">
+                        <img src="assets/images/blog/blog-size.png" style="height: 300px;" alt="team" />
+                    </div>
+                    <div class="content">
+                        <h3>Easy & Most Powerful Server Platform.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Team Area -->
+
+
+    <!-- Home Contact Area -->
+   
+
+<section class="home-contact-area home-2-contact ptb-100" >
+    <div class="container">
+        <div class="section-title" >
+            <span>Contact Us</span>
+            <h2>Do Let Us Know If We Can Help You!</h2>
+            <p>Share your pain points, any concern or even a suggestion with us. We would love to help you in making your business more efficient, faster and technologically advanced.</p>
+        </div>
+
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-lg-6 col-md-6">
+                <div class="content">
+                    <form id="contactForm">
+                        <div class="row">
+                            <!-- Name -->
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group input-icon">
+                                    <div><i class="fa fa-user"></i>  Your Name</div>
+                                    <input type="text" name="name" id="name" class="form-control" required
+                                        data-error="Please enter your name" placeholder="" />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group input-icon">
+                                   <div> <i class="fa fa-envelope"></i>    Your Email</div>
+                                    <input type="email" name="email" id="email" class="form-control" required
+                                        data-error="Please enter your email" placeholder="" />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group input-icon">
+                                    <div><i class="fa fa-phone"></i>  Your Phone</div>
+                                    <input type="text" name="phone_number" id="phone_number" required
+                                        data-error="Please enter your number" class="form-control"
+                                        placeholder="" />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="col-lg-12 col-sm-12">
+                                <div class="form-group input-icon">
+                                   <div> <i class="fa fa-tag"></i>  Subject</div>
+                                    <input type="text" name="msg_subject" id="msg_subject" class="form-control"
+                                        required data-error="Please enter your subject" placeholder="" />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group input-icon">
+                                    <div><i class="fa fa-comment"></i> Your Message</div>
+                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5"
+                                        required data-error="Write your message" placeholder=""></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-lg-12 col-md-12">
+                                <button type="submit" class="default-btn page-btn box-btn">
+                                    Submit
+                                </button>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Image -->
+            <div class="col-lg-6 col-md-6">
+                <div class="contact-img contact-img-2">
+                    <img src="assets/images/contact-img2.jpg" alt="contact" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- End Contact Area -->
+
+
+    <!-- Footer Area -->
+    <footer class="footer-area pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="content">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo2.png" style="height: 50px;"
+                                    alt="logo" /></a>
+                        </div>
+                        <p>Markss Infotech: Cost-effective barcoding hardware, software, service solutions.</p>
+                        <ul class="social">
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class='bx bxl-pinterest'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
+                <div class="col-lg-3 col-md-6">
+                    <div class="content ml-15">
+                        <h3>Products</h3>
+                        <ul class="footer-list">
+                            <li><a href="#">Barcode Scanners & Data Capture</a></li>
+                            <li><a href="#">Mobile Computers</a></li>
+                            <li><a href="#">Tablets</a></li>
+                            <li><a href="#">Printers</a></li>
+                            <li><a href="#">Printing Supplies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="content">
+                        <h3>Industries</h3>
+                        <ul class="footer-list">
+                            <li><a href="#">Industries</a></li>
+                            <li><a href="#">Retail</a></li>
+                            <li><a href="#">Manufacturing</a></li>
+                            <li><a href="#">Healthcare</a></li>
+                            <li><a href="#">Transportation & Logistics</a></li>
+                            <li><a href="#">Warehouse & Supply Chain</a></li>
+                            <li><a href="#">Government</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="content contacts">
+                        <h3 class="ml-40">Contact</h3>
+                        <ul class="footer-list foot-social">
+                            <li><a href="tel:+1123456789"><i class="bx bx-mobile-alt"></i> 022-28690268</a></li>
+                            <li><a href="mailto:info@markss.com"><i class="bx bxs-envelope"></i> info@markss.com</a></li>
+                            </li>
+                            <li><i class="bx bxs-map"></i> 70B, KCIEL, Post Office , Charkop Kandivali (W), Mumbai, Pincode: 400067 INDIA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="right">
+                            Copyright @2025 Markss Infotech. Designed By
+                            <a href="https://botree.in/" target="_blank">Botree</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+
+    <!-- Start Go Top Area -->
+    <div class="go-top">
+        <i class='bx bx-chevrons-up'></i>
+        <i class='bx bx-chevrons-up'></i>
+    </div>
+    <!-- End Go Top Area -->
+
+
+    <!-- jQuery Min JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap Bundle Min JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- MeanMenu Min JS -->
+    <script src="assets/js/meanmenu.min.js"></script>
+    <!-- Magnific Popup Min JS -->
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!-- Owl carasol Min Js -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Wow Min js -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Isotope MinJs -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Form Ajaxchimp Min JS -->
+    <script src="assets/js/ajaxchimp.min.js"></script>
+    <!-- Form Validator Js  -->
+    <script src="assets/js/form-validator.min.js"></script>
+    <!-- Contact Form Min Js -->
+    <script src="assets/js/contact-form-script.js"></script>
+    <!-- Main js -->
+    <script src="assets/js/main.js"></script>
+    
+</body>
+
+</html>

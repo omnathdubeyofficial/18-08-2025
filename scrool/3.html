@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sticky Scroll Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .static-section {
+      padding: 100px 20px;
+      background: #e2e2e2;
+    }
+
+    .sticky-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .sticky-section-inner {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      background: #f8f9fa;
+    }
+
+    .left-content {
+      height: 100vh;
+      overflow-y: auto;
+      padding: 20px;
+      background-color: #fff;
+      border-right: 2px solid #ccc;
+    }
+
+    .right-content {
+      padding: 20px;
+      background-color: #e9ecef;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Static Section Before -->
+  <section class="static-section">
+    <h2>Static Section (Top)</h2>
+    <p>हे सुरुवातीचं static section आहे. इथे normal scroll होईल.</p>
+    <p>lore</p>
+  </section>
+
+  <!-- Sticky Scroll Section -->
+  <section class="sticky-section">
+    <div class="sticky-section-inner">
+      <div class="container-fluid h-100">
+        <div class="row h-100">
+          <div class="col-lg-8">
+            <div class="left-content" id="scrollArea">
+              <h2>Scrollable Left Content</h2>
+              <!-- Long dummy content -->
+              <p>Content Line 1</p><p>Content Line 2</p><p>Content Line 3</p><p>Content Line 4</p><p>Content Line 5</p>
+              <p>Content Line 6</p><p>Content Line 7</p><p>Content Line 8</p><p>Content Line 9</p><p>Content Line 10</p>
+              <p>Content Line 11</p><p>Content Line 12</p><p>Content Line 13</p><p>Content Line 14</p><p>Content Line 15</p>
+              <p>Content Line 16</p><p>Content Line 17</p><p>Content Line 18</p><p>Content Line 19</p><p>Content Line 20</p>
+              <p>Content Line 21</p><p>Content Line 22</p><p>Content Line 23</p><p>Content Line 24</p><p>Content Line 25</p>
+              <p>Content Line 26</p><p>Content Line 27</p><p>Content Line 28</p><p>Content Line 29</p><p>Content Line 30</p>
+              <p>Content Line 1</p><p>Content Line 2</p><p>Content Line 3</p><p>Content Line 4</p><p>Content Line 5</p>
+              <p>Content Line 6</p><p>Content Line 7</p><p>Content Line 8</p><p>Content Line 9</p><p>Content Line 10</p>
+              <p>Content Line 11</p><p>Content Line 12</p><p>Content Line 13</p><p>Content Line 14</p><p>Content Line 15</p>
+              <p>Content Line 16</p><p>Content Line 17</p><p>Content Line 18</p><p>Content Line 19</p><p>Content Line 20</p>
+              <p>Content Line 21</p><p>Content Line 22</p><p>Content Line 23</p><p>Content Line 24</p><p>Content Line 25</p>
+              <p>Content Line 26</p><p>Content Line 27</p><p>Content Line 28</p><p>Content Line 29</p><p>Content Line 30</p>
+              <p>Content Line 1</p><p>Content Line 2</p><p>Content Line 3</p><p>Content Line 4</p><p>Content Line 5</p>
+              <p>Content Line 6</p><p>Content Line 7</p><p>Content Line 8</p><p>Content Line 9</p><p>Content Line 10</p>
+              <p>Content Line 11</p><p>Content Line 12</p><p>Content Line 13</p><p>Content Line 14</p><p>Content Line 15</p>
+              <p>Content Line 16</p><p>Content Line 17</p><p>Content Line 18</p><p>Content Line 19</p><p>Content Line 20</p>
+              <p>Content Line 21</p><p>Content Line 22</p><p>Content Line 23</p><p>Content Line 24</p><p>Content Line 25</p>
+              <p>Content Line 26</p><p>Content Line 27</p><p>Content Line 28</p><p>Content Line 29</p><p>Content Line 30</p>
+              <p>Content Line 1</p><p>Content Line 2</p><p>Content Line 3</p><p>Content Line 4</p><p>Content Line 5</p>
+              <p>Content Line 6</p><p>Content Line 7</p><p>Content Line 8</p><p>Content Line 9</p><p>Content Line 10</p>
+              <p>Content Line 11</p><p>Content Line 12</p><p>Content Line 13</p><p>Content Line 14</p><p>Content Line 15</p>
+              <p>Content Line 16</p><p>Content Line 17</p><p>Content Line 18</p><p>Content Line 19</p><p>Content Line 20</p>
+              <p>Content Line 21</p><p>Content Line 22</p><p>Content Line 23</p><p>Content Line 24</p><p>Content Line 25</p>
+              <p>Content Line 26</p><p>Content Line 27</p><p>Content Line 28</p><p>Content Line 29</p><p>Content Line 30</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="right-content">
+              <h4>Right Side</h4>
+              <p>ही right side आहे. कमी content आहे.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Static Section After -->
+  <section class="static-section">
+    <h2>Static Section (Bottom)</h2>
+    <p>हे शेवटचं static section आहे. sticky भागातून scroll झाल्यावर इथे येईल.</p>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scroll Logic -->
+  <script>
+    const scrollArea = document.getElementById('scrollArea');
+
+    window.addEventListener('wheel', function (e) {
+      const isScrollAtBottom =
+        scrollArea.scrollTop + scrollArea.clientHeight >= scrollArea.scrollHeight - 1;
+      const isScrollAtTop = scrollArea.scrollTop <= 0;
+
+      if (e.deltaY > 0) {
+        // 👇 Scroll Down
+        if (!isScrollAtBottom) {
+          e.preventDefault();
+          scrollArea.scrollTop += e.deltaY;
+        }
+        // else → allow window scroll
+      } else {
+        // 👆 Scroll Up
+        if (!isScrollAtTop) {
+          e.preventDefault();
+          scrollArea.scrollTop += e.deltaY;
+        }
+        // else → allow window scroll up
+      }
+    }, { passive: false });
+  </script>
+
+</body>
+</html>

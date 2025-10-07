@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Made to Measure – Section</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#070922;
+      --text:#EAF0FF;
+      --muted:#98A2B3;
+      --card:#0D102D;
+      --accent1:#7C3AED;
+      --accent2:#22D3EE;
+      --radius:16px;
+      --gap:22px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,"Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 10% 5%, rgba(124,58,237,.15), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(34,211,238,.12), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+
+    /* Layout */
+    .wrap{
+      max-width:1200px;
+      margin:0 auto;
+      padding:56px 20px 96px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:40px;
+    }
+    @media (min-width: 980px){
+      .grid{
+        grid-template-columns: 1.05fr 1.35fr; /* left copy / right gallery */
+        align-items:start;
+        gap:56px;
+      }
+    }
+
+    /* Left column */
+    .eyebrow{
+      display:inline-block;
+      font-weight:600;
+      letter-spacing:.02em;
+      background: linear-gradient(90deg, var(--accent2), var(--accent1));
+      -webkit-background-clip:text; background-clip:text;
+      color:transparent;
+      margin-bottom:10px;
+    }
+    h1{
+      font-size: clamp(32px, 4.3vw, 56px);
+      line-height:1.05;
+      margin: 6px 0 18px;
+      font-weight:700;
+      letter-spacing:.3px;
+    }
+    .lead{
+      color:var(--muted);
+      max-width:48ch;
+      font-size: clamp(15px, 1.8vw, 18px);
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-top:28px;
+      padding:12px 18px;
+      font-weight:600;
+      color:#fff;
+      background: linear-gradient(135deg, var(--accent2), var(--accent1));
+      border:none; border-radius:999px;
+      cursor:pointer;
+      box-shadow: var(--shadow);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:active{ transform: translateY(1px) scale(.98); box-shadow:0 6px 18px rgba(0,0,0,.35);}
+    .btn .dot{ width:8px; height:8px; border-radius:50%; background:#fff; opacity:.9; }
+
+    /* Right column: card gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: var(--gap);
+    }
+    @media (min-width:680px){
+      .gallery{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width:1180px){
+      .gallery{ grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* REMOVED: rule that hid cards after the second */
+
+    .card {
+      position: relative;
+      background: var(--card);
+      border-radius: 0; /* sharp corners */
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      isolation: isolate;
+      min-height: 220px;
+      display: flex;
+    }
+    .chev{
+      display:inline-grid; place-items:center;
+      width:28px; height:28px;
+      border-radius:0; /* square */
+      background: rgba(255,255,255,.14);
+      backdrop-filter: blur(4px);
+      transition: transform .18s ease;
+    }
+    .card.tall { min-height: 320px; }
+
+    .card img{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:cover;
+      filter:saturate(1.05) contrast(1.02);
+      transform: scale(1.02);
+      transition: transform .5s cubic-bezier(.19,1,.22,1), filter .4s ease;
+    }
+    .card::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(5,7,25,0) 40%, rgba(5,7,25,.85) 100%);
+      z-index:0;
+    }
+    .card:hover img{ transform: scale(1.06); filter:saturate(1.1) contrast(1.06); }
+
+    .label{
+      position:absolute; left:16px; bottom:14px;
+      z-index:1;
+      display:flex; align-items:center; gap:8px;
+      font-weight:700;
+      font-size: clamp(14px, 1.7vw, 18px);
+    }
+    .card:hover .chev{ transform: translateX(4px); }
+
+    .card a{ position:absolute; inset:0; z-index:2; }
+
+    /* Sticky left column */
+    .leftCol{
+      position: sticky;
+      top: 24px;
+      align-self: start;
+    }
+
+    .card:focus-within{ outline:2px solid var(--accent2); outline-offset:2px; }
+  </style>
+</head>
+<body>
+  <section class="first" style="height: 700px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et illo, enim obcaecati mollitia nihil suscipit ipsa praesentium unde explicabo harum consequatur accusamus hic sequi at, necessitatibus assumenda quis vero velit? </section>  
+  <section class="wrap">
+    <div class="grid">
+      <!-- LEFT COPY -->
+      <div class="leftCol">
+        <span class="eyebrow">Made to Measure</span>
+        <h1>Modern environments built on integrated stacks.</h1>
+        <p class="lead">
+          Hardware, software, supplies, and services—proven and customizable
+          foundations for operational efficiencies.
+        </p>
+        <button class="btn" id="ctaBtn" aria-label="View industries">
+          <span class="dot"></span> Industries
+        </button>
+      </div>
+
+      <!-- RIGHT GALLERY -->
+      <div class="gallery">
+        <!-- Existing 6 cards -->
+        <article class="card tall">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop" alt="Warehouse scene">
+          <div class="label">Warehousing &amp; Distribution <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1551281044-8b39a9047b66?q=80&w=1600&auto=format&fit=crop" alt="Government operations center">
+          <div class="label">Government <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1542060748-10c28b62716b?q=80&w=1600&auto=format&fit=crop" alt="Retail apparel store">
+          <div class="label">Retail <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <article class="card tall">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop" alt="Healthcare wristband scan">
+          <div class="label">Healthcare <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?q=80&w=1600&auto=format&fit=crop" alt="Manufacturing floor">
+          <div class="label">Manufacturing <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1600&auto=format&fit=crop" alt="Logistics trucking">
+          <div class="label">Logistics <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <!-- New cards appended -->
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1532634896-26909d0d4b84?q=80&w=1600&auto=format&fit=crop" alt="Education classroom">
+          <div class="label">Education <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <article class="card tall">
+          <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=1600&auto=format&fit=crop" alt="Technology workspace">
+          <div class="label">Technology <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1581093588401-22c9b6b41d9e?q=80&w=1600&auto=format&fit=crop" alt="Hospitality reception">
+          <div class="label">Hospitality <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <article class="card tall">
+          <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format&fit=crop" alt="Construction site">
+          <div class="label">Construction <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1497493292307-31c376b6e479?q=80&w=1600&auto=format&fit=crop" alt="Finance office">
+          <div class="label">Finance <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop" alt="Professional services team">
+          <div class="label">Professional Services <span class="chev">›</span></div>
+          <a href="#"></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+    <section class="first" style="height: 700px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et illo, enim obcaecati mollitia nihil suscipit ipsa praesentium unde explicabo harum consequatur accusamus hic sequi at, necessitatibus assumenda quis vero velit? </section>  
+
+  <script>
+    // Small ripple/feedback on CTA
+    const ctaBtn = document.getElementById('ctaBtn');
+    ctaBtn.addEventListener('click', (e) => {
+      const r = document.createElement('span');
+      const rect = ctaBtn.getBoundingClientRect();
+      r.style.position='absolute';
+      r.style.left = (e.clientX - rect.left - 10) + 'px';
+      r.style.top  = (e.clientY - rect.top - 10) + 'px';
+      r.style.width=r.style.height='20px';
+      r.style.borderRadius='999px';
+      r.style.background='rgba(255,255,255,.5)';
+      r.style.pointerEvents='none';
+      r.style.transform='scale(0)';
+      r.style.transition='transform .4s ease, opacity .6s ease';
+      ctaBtn.style.position='relative';
+      ctaBtn.appendChild(r);
+      requestAnimationFrame(()=>{ r.style.transform='scale(6)'; r.style.opacity='0';});
+      setTimeout(()=> r.remove(), 550);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Based Banner with Blank Section</title>
+  <style>
+    /* body {
+      margin: 0;
+      height: 400vh; 
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    } */
+
+    .banner {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      transition: right 0.1s ease-out;
+    }
+
+    .content-container {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50vw;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .scrolling-content {
+      position: absolute;
+      width: 100%;
+      transform: translateY(100%);
+      transition: transform 0.2s linear;
+      padding: 2rem;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .scrolling-content h2 {
+      margin-top: 0;
+    }
+
+    .spacer {
+      height: 200vh;
+    }
+
+    /* ✅ Blank Section */
+    .blank-section {
+      height: 100vh;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner Image -->
+    <img src="../assets/images/banner/1.jpeg" class="banner" id="banner" />
+
+  <!-- Right side content box -->
+  <div class="content-container">
+    <div class="scrolling-content" id="scrollingContent">
+      <h2>Welcome to the Right Panel</h2>
+      <p>This content scrolls upward when the banner reaches center.</p>
+      <p>You can add images, text, or anything here.</p>
+    </div>
+  </div>
+
+  <!-- Just to allow page scroll -->
+  <div class="spacer"></div>
+
+  <!-- ✅ Blank Section added below -->
+  <div class="blank-section">
+    ही एक ब्लँक सेक्शन आहे
+  </div>
+
+  <script>
+    const banner = document.getElementById("banner");
+    const scrollingContent = document.getElementById("scrollingContent");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      // Banner move
+      const maxScroll = 1000;
+      const maxMove = window.innerWidth * 0.5;
+      let move = (scrollY / maxScroll) * maxMove;
+      if (move > maxMove) move = maxMove;
+      banner.style.right = `${move}px`;
+
+      // Right content move
+      if (move >= maxMove) {
+        const contentScrollStart = maxScroll;
+        const contentScrollEnd = 2000;
+        const progress = Math.min((scrollY - contentScrollStart) / (contentScrollEnd - contentScrollStart), 1);
+        const translateY = 100 - progress * 100;
+        scrollingContent.style.transform = `translateY(${translateY}%)`;
+      } else {
+        scrollingContent.style.transform = 'translateY(100%)';
+      }
+    });
+  </script>
+
+</body>
+</html>

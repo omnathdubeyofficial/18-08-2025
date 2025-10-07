@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sticky Middle Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    .full-height {
+      height: 100vh;
+    }
+
+    .card {
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .middle-wrapper {
+      position: relative;
+    }
+
+    .middle {
+      position: relative;
+      height: 100vh;
+      background: #f8f9fa;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .middle.sticky {
+      position: sticky;
+      top: 0;
+    }
+
+    .right-scroll {
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden; /* Initially disabled */
+      padding-right: 10px;
+    }
+
+    .right-scroll.active {
+      overflow-y: auto; /* Enable scroll on sticky */
+    }
+
+    body.lock-scroll {
+      overflow: hidden; /* Disable window scroll */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Section -->
+  <section class="bg-primary text-white d-flex align-items-center justify-content-center full-height">
+    <h1>Top Section</h1>
+  </section>
+
+  <!-- Sticky Middle Section -->
+  <div class="middle-wrapper">
+    <section class="middle" id="middleSection">
+      <div class="container-fluid h-100">
+        <div class="row h-100">
+          <!-- Left Side -->
+          <div class="col-md-4 d-flex flex-column justify-content-center p-5">
+            <h2 class="mb-4 text-primary">Welcome to Our Services</h2>
+            <p class="text-dark">
+              Discover our wide range of professional services designed to meet modern needs.
+            </p>
+            <p class="text-muted">
+              Select a category to learn more about how we can help transform your business.
+            </p>
+          </div>
+
+          <!-- Right Side with Cards -->
+          <div class="col-md-8 right-scroll" id="rightScroll"  style="position: sticky !important;top: 0">
+            <div class="row g-4 pt-4 pb-4">
+              <!-- 8 Cards -->
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Retail" /><div class="card-body"><h5>Retail</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Warehouse" /><div class="card-body"><h5>Warehouse</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Healthcare" /><div class="card-body"><h5>Healthcare</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Manufacturing" /><div class="card-body"><h5>Manufacturing</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Finance" /><div class="card-body"><h5>Finance</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Education" /><div class="card-body"><h5>Education</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Logistics" /><div class="card-body"><h5>Logistics</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Hospitality" /><div class="card-body"><h5>Hospitality</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Retail" /><div class="card-body"><h5>Retail</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Warehouse" /><div class="card-body"><h5>Warehouse</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Healthcare" /><div class="card-body"><h5>Healthcare</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Manufacturing" /><div class="card-body"><h5>Manufacturing</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Finance" /><div class="card-body"><h5>Finance</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Education" /><div class="card-body"><h5>Education</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Logistics" /><div class="card-body"><h5>Logistics</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Hospitality" /><div class="card-body"><h5>Hospitality</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Retail" /><div class="card-body"><h5>Retail</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Warehouse" /><div class="card-body"><h5>Warehouse</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Healthcare" /><div class="card-body"><h5>Healthcare</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Manufacturing" /><div class="card-body"><h5>Manufacturing</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Finance" /><div class="card-body"><h5>Finance</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Education" /><div class="card-body"><h5>Education</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Logistics" /><div class="card-body"><h5>Logistics</h5></div></div></div>
+              <div class="col-md-6"><div class="card"><img src="https://via.placeholder.com/400x150?text=Hospitality" /><div class="card-body"><h5>Hospitality</h5></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bottom Section -->
+  <section class="bg-dark text-white d-flex align-items-center justify-content-center full-height">
+    <h1>Bottom Section</h1>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    const middleSection = document.getElementById('middleSection');
+    const rightScroll = document.getElementById('rightScroll');
+    const body = document.body;
+
+    function isMiddleStickyVisible() {
+      const rect = middleSection.getBoundingClientRect();
+      return rect.top <= 0 && rect.bottom > window.innerHeight;
+    }
+
+    function isRightScrollAtEnd() {
+      return rightScroll.scrollTop + rightScroll.clientHeight >= rightScroll.scrollHeight - 1;
+    }
+
+    function handleScroll() {
+      if (isMiddleStickyVisible()) {
+        middleSection.classList.add('sticky');
+        rightScroll.classList.add('active');     // enable internal scroll
+        body.classList.add('lock-scroll');       // disable window scroll
+
+        if (isRightScrollAtEnd()) {
+          rightScroll.classList.remove('active');   // disable internal scroll
+          body.classList.remove('lock-scroll');     // enable window scroll
+          middleSection.classList.remove('sticky'); // remove sticky
+        }
+      } else {
+        // Reset everything outside sticky
+        middleSection.classList.remove('sticky');
+        rightScroll.classList.remove('active');
+        body.classList.remove('lock-scroll');
+      }
+    }
+
+    // Listen to scrolls
+    window.addEventListener('scroll', handleScroll);
+    rightScroll.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', handleScroll);
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Animation Banner</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 200vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      transition: all 1s ease;
+      z-index: 1;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 30%;
+      height: 100vh;
+      background: #f3f3f3;
+      padding: 20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      transition: top 1s ease;
+      z-index: 2;
+    }
+
+    .content p {
+      transform: translateY(100%);
+      transition: transform 1s ease;
+    }
+
+    /* Scroll-activated */
+    .scrolled .banner {
+      width: 70%;
+      left: 0;
+    }
+
+    .scrolled .content {
+      top: 0;
+    }
+
+    .scrolled .content p {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="scrollContainer">
+  <div class="banner">
+    <img src="../assets/images/slider/banner-slider-03.jpg" alt="Banner Image">
+  </div>
+  <div class="content">
+    <p>Scroll नंतर हे Content वरच्या बाजूला move होईल</p>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const container = document.getElementById('scrollContainer');
+    if (window.scrollY > 50) {
+      container.classList.add('scrolled');
+    } else {
+      container.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>

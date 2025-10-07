@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- 
+<script>
+  AOS.init();
+</script> -->
+
+<style>
+    .milestones-section {
+    padding: 80px 20px;
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', sans-serif;
+    }
+
+    .section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    }
+
+    .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: #0d6efd;
+        top: 0;
+        /* bottom: 0; */
+        bottom: 160px; /* instead of bottom: 0; */
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+    }
+
+    .timeline-item.left {
+    left: 0;
+    }
+
+    .timeline-item.right {
+    left: 50%;
+    }
+
+    .timeline-item.center {
+    left: 25%;
+    width: 50%;
+    text-align: center;
+      margin-top: 60px;
+    }
+
+    .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    border: 4px solid #fff;
+    z-index: 1;
+    }
+
+    .timeline-item.left::before {
+    right: -10px;
+    }
+
+    .timeline-item.right::before {
+    left: -10px;
+    }
+
+    .timeline-item.center::before {
+    left: 50%;
+    transform: translateX(-50%);
+      top: 0px; /* instead of 20px */
+
+    }
+
+    .timeline-item .content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .timeline-item .content.highlight {
+    border: 2px solid #0d6efd;
+    }
+
+    .timeline-item h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0d6efd;
+    }
+
+    .timeline-item p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    }
+
+    /* trofi */
+
+    .timeline-item::before {
+    content: "\f091"; /* Trophy Unicode */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 16px;
+    /* color: #fff;
+    background-color: #0d6efd; */
+    background-color: #000; /* gold */
+    color:#ffc107;
+
+
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    }
+
+    .timeline-item.left::before {
+    right: -18px;
+    }
+
+    .timeline-item.right::before {
+    left: -18px;
+    }
+
+    /* .timeline-item.center::before {
+    left: 50%;
+    transform: translateX(-50%);
+    } */
+@media (max-width: 520px) {
+
+
+    .timeline::after{
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: #0d6efd;
+        top: 25px;
+        /* bottom: 0; */
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item.center{
+        /* left: 25%; */
+        width: 100%;
+        /* text-align: center; */
+        margin-top: 0px;
+    }
+
+
+  .timeline::after {
+    left: 20px; /* Center line now on left side */
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+    margin-bottom: 0px;
+    /* margin-bottom: 40px; */
+  }
+
+  .timeline-item.left,
+  .timeline-item.right,
+  .timeline-item.center {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    left: 20px !important; /* Trophy marker on left */
+    right: auto;
+  }
+
+  .timeline-item.center::before {
+    left: 20px !important;
+    transform: none;
+  }
+
+  .timeline-item .content {
+    text-align: left;
+  }
+}
+
+</style>    
+</head>
+<body>
+<section class="milestones-section">
+  <div class="container">
+    <h2 class="section-title">Our Journey</h2>
+    <div class="timeline">
+
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>1992–1995</h3>
+          <p>Began as a barcode and automation consultancy.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>1995 onward</h3>
+          <p>Transitioned into a full-fledged AIDC solution provider, launching flagship products and forming global tech partnerships.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>2000s–2010s</h3>
+          <p>Expanded into multiple industries including manufacturing, pharma, healthcare, logistics, FMCG, and government. Introduced track and trace, WMS, MES, and automation systems.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>2019</h3>
+          <p>Received the Zebra APAC Award for excellence in AIDC across Asia-Pacific.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>2021</h3>
+          <p>Honored as Zebra Solution Partner of the Year for our innovation and customer-first delivery.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>2022</h3>
+          <p>Awarded Zebra Partner Solution of the Year – APAC, recognizing industry-leading, scalable deployments.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>2024</h3>
+          <p>Zebra Technologies Partner of the Year – ISC Region for excellence in reliable AIDC solutions.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>2025</h3>
+          <p>Zebra Partner of the Year. Strengthened leadership in end-to-end enterprise solutions.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item center">
+        <div class="content highlight">
+          <h3>Today</h3>
+          <p>Serving 3,000+ clients, delivering 300+ projects across 10+ major cities — enabling seamless interoperability of physical assets & digital intelligence at scale.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

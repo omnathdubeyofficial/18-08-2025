@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image-Text Slider</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .slider-container {
+      position: relative;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      background: white;
+      border-radius: 8px;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      display: flex;
+      flex: 0 0 100%;
+    }
+
+    .slide-left, .slide-right {
+      flex: 1;
+    }
+
+    .slide-left img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .slide-right {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #fafafa;
+    }
+
+    .slider-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .slider-controls button {
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .slider-controls button:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    /* Responsive layout */
+    @media (max-width: 768px) {
+      .slide {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide">
+      <div class="slide-left">
+        <img src="./assets/images/service/1.jpg" alt="Slide 1">
+      </div>
+      <div class="slide-right">
+        <h2>पहिला स्लाईड</h2>
+        <p>हा स्लाईडचा मजकूर उजव्या बाजूस दिसतो.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-left">
+        <img src="./assets/images/service/2.jpg" alt="Slide 2">
+      </div>
+      <div class="slide-right">
+        <h2>दुसरा स्लाईड</h2>
+        <p>हा दुसरा स्लाईड आहे, वेगळा इमेज व मजकूर.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-left">
+        <img src="./assets/images/service/3.jpg" alt="Slide 3">
+      </div>
+      <div class="slide-right">
+        <h2>तिसरा स्लाईड</h2>
+        <p>हा तिसरा उदाहरणासाठी स्लाईड.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-controls">
+    <button id="prevBtn">⟨</button>
+    <button id="nextBtn">⟩</button>
+  </div>
+</div>
+
+<script>
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let currentIndex = 0;
+
+  function updateSliderPosition() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSliderPosition();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSliderPosition();
+  });
+
+  // Optional auto-slide
+  setInterval(() => {
+    nextBtn.click();
+  }, 5000);
+</script>
+
+</body>
+</html>

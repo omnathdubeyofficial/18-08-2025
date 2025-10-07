@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Navbar Hover + Nested Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        /* Bootstrap default caret remove */
+        .navbar .dropdown-toggle::after {
+            display: none;
+        }
+
+        /* + sign styling */
+        .menu-plus {
+            font-weight: bold;
+            margin-left: 4px;
+        }
+
+        /* Mobile: caret लपवा */
+        @media (max-width: 991.98px) {
+
+            .navbar .dropdown-menu::before,
+            .dropdown-submenu>.dropdown-menu::before {
+                content: none !important;
+                display: none !important;
+            }
+
+            /* mobile मध्ये dropdown static ठेवला तर caret दिसतच नाही */
+            .navbar .dropdown-menu {
+                position: static !important;
+            }
+        }
+
+
+        /* Hover effect for desktop (main dropdown & nested dropdowns) */
+        @media (min-width: 992px) {
+            .navbar .dropdown:hover>.dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-submenu:hover>.dropdown-menu {
+                display: block;
+            }
+        }
+
+        /* Dropdown caret (triangle) */
+        .navbar .dropdown-menu::before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            left: 20px;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid white;
+            /* dropdown bg color */
+        }
+
+        /* Submenu styling */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu>.dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+        }
+
+        .dropdown-submenu>a::after {
+            content: "›";
+            float: right;
+        }
+
+        /* Mobile fix for submenu */
+        @media (max-width: 991px) {
+            .dropdown-submenu>.dropdown-menu {
+                left: 0;
+                top: 0;
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- About Us -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutMenu" role="button"
+                            data-toggle="dropdown">
+                            About Us <span class="menu-plus">+</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutMenu">
+
+                            <!-- Company Overview with nested menu -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Company Overview</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">History</a></li>
+                                    <li><a class="dropdown-item" href="#">Leadership</a></li>
+                                    <li><a class="dropdown-item" href="#">Achievements</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="dropdown-item" href="#">Vision, Mission & Values</a></li>
+                            <li><a class="dropdown-item" href="#">Partners & Alliances</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Other menu -->
+                    <li class="nav-item"><a class="nav-link" href="#">Industries <span class="menu-plus">+</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Mobile मध्ये submenu click handle
+        if (window.innerWidth < 992) {
+            $('.dropdown-submenu a.dropdown-toggle').on('click', function (e) {
+                $(this).next('.dropdown-menu').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        }
+    </script>
+
+</body>
+
+</html>

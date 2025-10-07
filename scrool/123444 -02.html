@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Scroll Section</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .static-section {
+      background-color: #f2f2f2;
+      height: 100vh;
+    }
+
+    .sticky-section {
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .sticky-section-inner {
+      display: flex;
+      padding: 60px 20px;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .left {
+      flex: 2;
+      border: 2px solid red;
+      height: 700px;
+      overflow-y: auto;
+      padding-right: 20px;
+    }
+
+    .right {
+      flex: 1;
+      border: 2px solid blue;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🟢 Top Normal Section -->
+  <section class="static-section">
+    <h2>Top Normal Section</h2>
+    <p>हे सुरुवातीचं dummy content आहे.</p>
+  </section>
+
+  <!-- 🟡 Sticky Scroll Section -->
+  <section class="sticky-section">
+    <div class="sticky-section-inner">
+      <div class="left" id="scrollArea">
+        <h3>Left Scrollable Content</h3>
+        <!-- dummy long content -->
+        <p>Dummy para repeat 1</p><p>Dummy para repeat 2</p><p>Dummy para repeat 3</p>
+        <p>Dummy para repeat 4</p><p>Dummy para repeat 5</p><p>Dummy para repeat 6</p>
+        <p>Dummy para repeat 7</p><p>Dummy para repeat 8</p><p>Dummy para repeat 9</p>
+        <p>Dummy para repeat 10</p><p>Dummy para repeat 11</p><p>Dummy para repeat 12</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+        <p>Dummy para repeat 13</p><p>Dummy para repeat 14</p><p>Dummy para repeat 15</p>
+      </div>
+      <div class="right">
+        <h3>Right Static Content</h3>
+        <p>ही side fix आहे.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟢 Bottom Normal Section (तुला हवं होतं ते) -->
+  <section class="static-section">
+    <h2>Bottom Normal Section</h2>
+    <p>हे खालीचं dummy content आहे. Sticky नंतर हे scroll मध्ये दिसावं.</p>
+  </section>
+
+  <script>
+    const scrollArea = document.getElementById('scrollArea');
+    const stickySection = document.querySelector('.sticky-section');
+
+    window.addEventListener('wheel', function (e) {
+      const bounds = stickySection.getBoundingClientRect();
+      const isStickyInView = bounds.top <= 0 && bounds.bottom > 0;
+
+      if (!isStickyInView) return; // viewport मध्ये नसेल तर allow normal scroll
+
+      const isScrollAtBottom = scrollArea.scrollHeight - scrollArea.scrollTop <= scrollArea.clientHeight + 1;
+      const isScrollAtTop = scrollArea.scrollTop <= 0;
+
+      if (e.deltaY > 0) {
+        if (!isScrollAtBottom) {
+          scrollArea.scrollTop += e.deltaY;
+          e.preventDefault();
+        }
+        // else scroll allow – sticky नंतरचा section चालू होईल
+      } else {
+        if (!isScrollAtTop) {
+          scrollArea.scrollTop += e.deltaY;
+          e.preventDefault();
+        }
+        // else scroll allow – वरचा section परत येईल
+      }
+    }, { passive: false });
+  </script>
+
+</body>
+</html>
