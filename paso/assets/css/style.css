@@ -67,7 +67,7 @@ button:focus {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   color: #293a5c;
-  font-family: "Catamaran", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
 }
 
@@ -358,8 +358,8 @@ Go Top Style*/
   text-align: center;
   overflow: hidden;
   z-index: 1;
-  background-color: #1d42d9;
-  border: 1px solid #1d42d9;
+  background-color: #3d59fa;
+  border: 1px solid #3d59fa;
 }
 .box-btn::before {
   content: "";
@@ -368,7 +368,7 @@ Go Top Style*/
   left: 100%;
   width: 100%;
   height: 50%;
-  background-color: #051242;
+  background-color: #3d59fa;
   z-index: -1;
   transition: all 0.5s;
 }
@@ -379,7 +379,7 @@ Go Top Style*/
   right: 100%;
   width: 100%;
   height: 50%;
-  background-color: #051242;
+  background-color: #3d59fa;
   z-index: -1;
   transition: all 0.5s;
 }
@@ -812,7 +812,7 @@ Navbar Area Css
   background: #fff;
 }
 .navbar-area .box-btn:hover {
-  color: #132460;
+  color: #3d59fa;
 }
 .navbar-area .nav-btn {
   margin-left: 20px;
@@ -4812,7 +4812,7 @@ Pricing Area Style
 }
 .single-pricing span {
   font-size: 30px;
-  font-family: "Catamaran", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #293a5c;
   font-weight: 700;
   display: block;
@@ -4887,7 +4887,7 @@ Pricing Area Style
 .tab.quote-list-tab .tabs li {
   display: inline-block;
   padding: 0 10px;
-  font-family: "Catamaran", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #293a5c;
   font-size: 20px;
   font-weight: 700;
