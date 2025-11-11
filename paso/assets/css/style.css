@@ -50,7 +50,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #293a5c;
+  color: #062b81;
 }
 a:focus {
   text-decoration: none;
@@ -66,7 +66,7 @@ button:focus {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  color: #293a5c;
+  color: #062b81;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
 }
@@ -106,7 +106,7 @@ ul {
 
 .form-control {
   height: 50px;
-  color: #293a5c;
+  color: #062b81;
   border: 1px solid #e8e8e8;
   background-color: transparent;
   border-radius: 0;
@@ -281,7 +281,7 @@ Go Top Style*/
 }
 .go-top:hover {
   color: #ffffff;
-  background-color: #293a5c;
+  background-color: #062b81;
 }
 .go-top:hover::before {
   opacity: 1;
@@ -340,7 +340,7 @@ Go Top Style*/
 .section-title h2 {
   font-size: 40px;
   text-transform: capitalize;
-  color: #293a5c;
+  color: #062b81;
   margin-bottom: 20px;
 }
 
@@ -358,8 +358,8 @@ Go Top Style*/
   text-align: center;
   overflow: hidden;
   z-index: 1;
-  background-color: #3d59fa;
-  border: 1px solid #3d59fa;
+  background-color: #1d42d9;
+  border: 1px solid #1d42d9;
 }
 .box-btn::before {
   content: "";
@@ -368,7 +368,7 @@ Go Top Style*/
   left: 100%;
   width: 100%;
   height: 50%;
-  background-color: #3d59fa;
+  background-color: #051242;
   z-index: -1;
   transition: all 0.5s;
 }
@@ -379,7 +379,7 @@ Go Top Style*/
   right: 100%;
   width: 100%;
   height: 50%;
-  background-color: #3d59fa;
+  background-color: #051242;
   z-index: -1;
   transition: all 0.5s;
 }
@@ -400,13 +400,13 @@ Go Top Style*/
 /** Line Btn Css **/
 .line-bnt {
   font-size: 14px;
-  color: #293a5c;
+  color: #062b81;
   font-weight: 600;
   line-height: 1;
 }
 .line-bnt:hover {
   letter-spacing: 1px;
-  color: #293a5c;
+  color: #062b81;
 }
 
 /** Preloader Css **/
@@ -812,7 +812,7 @@ Navbar Area Css
   background: #fff;
 }
 .navbar-area .box-btn:hover {
-  color: #3d59fa;
+  color: #132460;
 }
 .navbar-area .nav-btn {
   margin-left: 20px;
@@ -1396,7 +1396,7 @@ Choose Area 2 Css
 }
 .home2-choose-area .single-choose h3 {
   text-align: center;
-  color: #293a5c;
+  color: #062b81;
   margin-bottom: 0;
   padding: 10px 5px;
   font-size: 17px;
@@ -1418,12 +1418,12 @@ Choose Area 2 Css
 }
 .home2-choose-area .choose-c .content h3 {
   font-size: 30px;
-  color: #293a5c;
+  color: #062b81;
   margin-bottom: 15px;
   font-weight: 600;
 }
 .home2-choose-area .choose-c .content p {
-  color: #293a5c;
+  color: #062b81;
   margin-bottom: 10px;
 }
 .home2-choose-area .choose-c .content p:last-child {
@@ -1747,7 +1747,7 @@ Client Area Css
   z-index: 1;
 }
 .client-area .top-title {
-  color: #293a5c;
+  color: #062b81;
 }
 .client-area::before {
   content: "";
@@ -1831,7 +1831,7 @@ Blog Area Css
   background: #7a7e9a;
 }
 .home-blog-area .single-blog .content span {
-  color: #293a5c;
+  color: #062b81;
   font-weight: 500;
 }
 .home-blog-area .single-blog .content h3 {
@@ -1888,7 +1888,7 @@ Blog Area Css
 }
 .home-blog-area .blog-btn p {
   font-size: 17px;
-  color: #293a5c;
+  color: #062b81;
   margin-bottom: 0;
 }
 .home-blog-area .blog-btn p a {
@@ -2194,7 +2194,7 @@ Facilities Area Css
   color: #181818;
 }
 .facilities-area .content h3 {
-  color: #293a5c;
+  color: #062b81;
   margin-bottom: 10px;
 }
 .facilities-area .content p {
@@ -2495,14 +2495,14 @@ Case Area Css
   margin-top: 30px;
 }
 .case-area .dropdown p {
-  color: #293a5c;
+  color: #062b81;
   margin-bottom: 5px;
 }
 .case-area .dropdown button {
-  border: 1px solid #293a5c;
+  border: 1px solid #062b81;
   background: transparent;
   padding: 8px 30px;
-  color: #293a5c;
+  color: #062b81;
   font-weight: 500;
 }
 .case-area .dropdown .dropdown-item {
@@ -2742,7 +2742,7 @@ Blog Area Css
   background: #051242;
 }
 .blog-area .single-blog .content span {
-  color: #293a5c;
+  color: #062b81;
   font-weight: 500;
 }
 .blog-area .single-blog .content h3 {
@@ -2798,7 +2798,7 @@ Blog Details Area Style
 }
 .blog-details-area .blog-details-desc .article-image {
   position: relative;
-  background-color: #293a5c;
+  background-color: #062b81;
 }
 .blog-details-area .blog-details-desc .article-content {
   margin-top: 30px;
@@ -2946,7 +2946,7 @@ Blog Details Area Style
   border-radius: 4px;
 }
 .blog-details-area blockquote p {
-  color: #293a5c;
+  color: #062b81;
   line-height: 1.6;
   margin-bottom: 0;
   font-style: italic;
@@ -3014,7 +3014,7 @@ Blog Details Area Style
 .blog-details-area .post-navigation .navigation-links div a {
   display: inline-block;
   font-weight: 600;
-  color: #293a5c;
+  color: #062b81;
 }
 .blog-details-area .post-navigation .navigation-links div a:hover {
   color: #1d42d9;
@@ -3071,7 +3071,7 @@ Blog Details Area Style
 }
 .blog-details-area .comments-area .comment-body .reply a {
   border: 1px solid #ded9d9;
-  color: #293a5c;
+  color: #062b81;
   display: inline-block;
   padding: 5px 20px;
   border-radius: 30px;
@@ -3104,7 +3104,7 @@ Blog Details Area Style
 }
 .blog-details-area .comments-area .comment-author .fn {
   font-weight: 600;
-  color: #293a5c;
+  color: #062b81;
   font-size: 18px;
 }
 .blog-details-area .comments-area .comment-author .says {
@@ -3159,7 +3159,7 @@ Blog Details Area Style
 .blog-details-area .comments-area .comment-respond label {
   display: block;
   font-weight: 500;
-  color: #293a5c;
+  color: #062b81;
   margin-bottom: 5px;
 }
 .blog-details-area .comments-area .comment-respond input[type=datetime-local] {
@@ -3349,7 +3349,7 @@ Blog Details Area Style
 }
 .blog-details-area .comments-area .comment-respond .form-submit input:hover {
   color: #ffffff;
-  background-color: #293a5c;
+  background-color: #062b81;
 }
 .blog-details-area .comments-area .comment-respond .form-submit input:focus {
   color: #ffffff;
@@ -3373,7 +3373,7 @@ Blog Details Area Style
   margin-bottom: 0;
   background-color: #ececec;
   padding: 10px 20px;
-  color: #293a5c;
+  color: #062b81;
   position: relative;
 }
 .blog-details-area .widget-area .widget .widget-title::before {
@@ -3422,7 +3422,7 @@ Blog Details Area Style
   cursor: pointer;
 }
 .blog-details-area .widget-area .widget_search form button:hover {
-  background-color: #293a5c;
+  background-color: #062b81;
 }
 .blog-details-area .widget-area .widget-peru-posts-thumb {
   position: relative;
@@ -3455,7 +3455,7 @@ Blog Details Area Style
   background-repeat: no-repeat;
   background-position: center center !important;
   position: relative;
-  background-color: #293a5c;
+  background-color: #062b81;
 }
 .blog-details-area .widget-area .widget-peru-posts-thumb .item .thumb .fullimage.bg1 {
   background-image: url(../../assets/images/blog-details/popular-posts-1.png);
@@ -4813,7 +4813,7 @@ Pricing Area Style
 .single-pricing span {
   font-size: 30px;
   font-family: "Open Sans", sans-serif;
-  color: #293a5c;
+  color: #062b81;
   font-weight: 700;
   display: block;
   line-height: 1;
@@ -4888,7 +4888,7 @@ Pricing Area Style
   display: inline-block;
   padding: 0 10px;
   font-family: "Open Sans", sans-serif;
-  color: #293a5c;
+  color: #062b81;
   font-size: 20px;
   font-weight: 700;
 }
@@ -4997,7 +4997,7 @@ Banner Area Three Style
 }
 .main-banner-three .main-banner-content .content .slider-btn-wrap .box-btn.border-btn:hover {
   color: #ffffff;
-  border-color: #293a5c;
+  border-color: #062b81;
 }
 .main-banner-three .banner-image-slider .banner-image {
   height: 100vh;
